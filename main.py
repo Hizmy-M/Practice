@@ -24,8 +24,11 @@ class Store:
 
         print('No games')
 
+    def search_game(self):
+        pass
 
-one_game = Game(44, 'GTA', 'Open')
+
+one_game = Game(44, 'GTAA', 'Open')
 one_store = Store()
 
 one_store.add_game(one_game)
