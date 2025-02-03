@@ -15,3 +15,20 @@ class Store:
     def add_game(self, game):
         self.games.append(game)
         print(f'{game.game_name} added successfully')
+
+    def remove_game(self, id):
+        for game in self.games:
+            if id == game.game_id:
+                print('Game available removed')
+                return
+
+        print('No games')
+
+
+one_game = Game(44, 'GTA', 'Open')
+one_store = Store()
+
+one_store.add_game(one_game)
+one_store.remove_game(44)
+one_store.remove_game(7)
+
