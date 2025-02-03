@@ -7,3 +7,11 @@ class Game:
     def display_info(self):
         return f'{self.game_name} is a {self.game_type}'
 
+
+class Store:
+    def __init__(self):
+        self.games = []
+
+    def add_game(self, game):
+        self.games.append(game)
+        print(f'{game.game_name} added successfully')
