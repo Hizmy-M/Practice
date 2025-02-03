@@ -1,1 +1,4 @@
-print('asd')
+def main():
+    print('its working')
+
+main()
