@@ -1,11 +1,8 @@
-class Animal:
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(f'{self.name} makes a sound')
-
-
-class Dog(Animal):
-    def speak(self):
-        return super().speak()
+try:
+    user_input = int(input('Enter: '))
+except ValueError:
+    print('Enter only integer value')
+except TypeError:
+    print('There is an type error')
+else:
+    print(user_input)
