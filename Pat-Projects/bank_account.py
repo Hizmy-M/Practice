@@ -1,12 +1,12 @@
 class Person:
     def __init__(self, name, age):
-        self.__name = name
-        self.__age = age
-        
-    def display_info(self):
-        print(f'{self.__name}')
+        self.name = name 
+        self.age = age 
 
 
-person_one = Person('asd', 'asd')
-person_one.display_info()
+    def display(self):
+        return f"Name: {self.name} age {self.age}"
+    
 
+person_one = Person('Test', 123)
+print(person_one.display())
