@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI()  # Create a FastAPI instance
 
-@app.get("/users/me")
-async def read_users_me():
-    return {"user_id" : "the current user"}
+@app.get("/")  # Define a GET route
+async def home():
+    return {"message": "Hello, FastAPI!"}
 
-@app.get("/users/{user_id}")
-async def read_users(user_id : int):
+@app.get("/greet/{name}")  # Path parameter
+async def greet(name: str):
     return {
-        "user_id" : user_id,
-        "name" : "naming"
+        "message1": f"Hello, {name}!",
+        "message":"asdasdadsasdasd"
         }
