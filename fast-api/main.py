@@ -8,5 +8,7 @@ async def read_users_me():
 
 @app.get("/users/{user_id}")
 async def read_users(user_id : int):
-    return {"user_id" : user_id}
-
+    return {
+        "user_id" : user_id,
+        "name" : "naming"
+        }
