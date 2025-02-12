@@ -1,14 +1,12 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
-app = FastAPI()  # Create a FastAPI instance
+app = FastAPI()
 
-@app.get("/")  # Define a GET route
-async def home():
-    return {"message": "Hello, FastAPI!"}
+# Define a data model for input validation
+class NameRequest(BaseModel):
+    name: str
 
-@app.get("/greet/{name}")  # Path parameter
-async def greet(name: str):
-    return {
-        "message1": f"Hello, {name}!",
-        "message":"asdasdadsasdasd"
-        }
+@app.post("/greet/")
+async def greet(request: NameRequest):
+    return {"message": f"Hello, {request.name}!"}
