@@ -6,7 +6,7 @@ class Games:
     def display_info(self):
         print(f"{self.name} and {self.age}") 
     
-
+# comments added
 class Store:
     def __init__(self):
         self.games = []
